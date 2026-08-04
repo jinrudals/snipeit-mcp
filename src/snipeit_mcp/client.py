@@ -54,6 +54,8 @@ def _resolve_token() -> str | None:
         return access.token
     return os.getenv("SNIPEIT_TOKEN")
 
+def _resolve_allow_http() -> bool:
+    return os.getenv("SNIPEIT_ALLOW_HTTP", "").strip().lower() in {"1", "true", "yes", "on"}
 
 def _require_url_and_token() -> tuple[str, str]:
     url = _resolve_url()
@@ -71,7 +73,7 @@ def _require_url_and_token() -> tuple[str, str]:
 def get_snipeit_client() -> SnipeIT:
     """Get or create a Snipe-IT client instance for the current call."""
     url, creds = _require_url_and_token()
-    return SnipeIT(url=url, token=creds)
+    return SnipeIT(url=url, token=creds, allow_http=_resolve_allow_http())
 
 
 class SnipeITDirectAPI:
