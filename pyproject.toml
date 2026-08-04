@@ -9,7 +9,7 @@ keywords = ["mcp", "snipeit", "inventory", "asset-management", "ai"]
 dependencies = [
     "fastmcp>=3.0.0,<4.0.0",
     "requests>=2.31.0",
-    "snipeit-api @ git+https://github.com/lfctech/snipeit-python-api@main",
+    "snipeit-api @ git+https://github.com/jinrudals/snipeit-python-api@main",
 ]
 
 [project.optional-dependencies]

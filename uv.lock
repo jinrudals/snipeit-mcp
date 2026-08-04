@@ -1300,7 +1300,7 @@ wheels = [
 [[package]]
 name = "snipeit-api"
 version = "0.1.0"
-source = { git = "https://github.com/lfctech/snipeit-python-api?rev=main#11cd643d6c961fe51ca91a5f9e1a688e5c9a4a30" }
+source = { git = "https://github.com/jinrudals/snipeit-python-api?rev=main#d8259563acd8461d1ade86c4b55ddc871c9bd229" }
 dependencies = [
     { name = "requests" },
 ]
