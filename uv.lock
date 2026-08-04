@@ -1299,10 +1299,11 @@ wheels = [
 
 [[package]]
 name = "snipeit-api"
-version = "0.1.0"
+version = "0.5.0"
 source = { git = "https://github.com/jinrudals/snipeit-python-api?rev=main#d8259563acd8461d1ade86c4b55ddc871c9bd229" }
 dependencies = [
-    { name = "requests" },
+    { name = "httpx" },
+    { name = "pydantic" },
 ]
 
 [[package]]
@@ -1329,7 +1330,7 @@ requires-dist = [
     { name = "pytest-asyncio", marker = "extra == 'test'", specifier = ">=0.21.0" },
     { name = "requests", specifier = ">=2.31.0" },
     { name = "responses", marker = "extra == 'test'", specifier = ">=0.23.0" },
-    { name = "snipeit-api", git = "https://github.com/lfctech/snipeit-python-api?rev=main" },
+    { name = "snipeit-api", git = "https://github.com/jinrudals/snipeit-python-api?rev=main" },
 ]
 provides-extras = ["test"]
 
